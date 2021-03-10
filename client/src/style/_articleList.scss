@@ -1,0 +1,277 @@
+.articles-list {
+  position: relative;
+  top: 0;
+  left: 0;
+  // background: linear-gradient(rgb(32, 222, 255) 0%, rgb(255, 255, 255) 10%, $main-color 100%);
+  background-color: rgb(5, 121, 254);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .articles-list__sea-container {
+    position: relative;
+    background-color: rgb(0, 94, 177);
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+
+    @media screen and (min-width: map-get($breakpoins, xs)) {
+      height: 40vh;
+    }
+
+    @media screen and (min-width: map-get($breakpoins, md)) {
+      height: 60vh;
+    }
+
+    @media screen and (min-width: map-get($breakpoins, lg)) {
+      height: 80vh;
+    }
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      height: 160vh;
+    }
+
+    .lighthouse {
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      right: -15%;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .articles-list__moon {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      width: 20vw;
+      height: 20vw;
+      align-self: center;
+
+      @media screen and (min-width: map-get($breakpoins, xs)) {}
+    }
+
+    .articles-list__sea {
+      position: absolute;
+      width: 100%;
+
+      bottom: 0;
+      width: 100%;
+    }
+
+    .articles-list__cloud {
+      width: 26vw;
+      height: 12vw;
+      position: absolute;
+      top: 36%;
+      left: -50%;
+
+      animation: cloud 60s 50s linear infinite;
+    }
+
+    .articles-list__cloud2 {
+      width: 30vw;
+      height: 15vw;
+      position: absolute;
+      top: 30%;
+      left: -50%;
+
+      animation: cloud 60s 6s linear infinite;
+
+      @media screen and (min-width: map-get($breakpoins, xs)) {
+        top: 40%;
+      }
+    }
+
+    .articles-list__cloud3 {
+      width: 30vw;
+      height: 20vw;
+      position: absolute;
+      top: 33%;
+      left: -50%;
+      animation: cloud 60s 20s linear infinite;
+    }
+
+    .articles-list__cloud4 {
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      top: 35%;
+      left: -100%;
+      animation: cloud 40s 5s linear infinite;
+
+      @media screen and (min-width: map-get($breakpoins, xs)) {
+        top: 48%;
+      }
+    }
+
+    .articles-list__cloud5 {
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      top: 40%;
+      left: -20%;
+
+      animation: cloud 40s linear infinite;
+    }
+
+    @keyframes cloud {
+      0% {
+        transform: translateX(-110%) scale(1);
+      }
+
+      100% {
+        transform: translateX(600%) scale(1.5);
+      }
+    }
+
+    .articles-list__sea-picture {
+      width: 100%;
+    }
+  }
+
+  .articles-list__uw-container::before {
+    background: linear-gradient(transparent 0%,
+        rgb(5, 121, 254) 30%,
+        rgb(0, 172, 199) 60%,
+        transparent);
+
+    content: "";
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      height: 150px;
+      top: -80px;
+    }
+  }
+
+  .articles-list__uw-container {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    top: 0;
+    left: 0;
+
+    .articles-list__uw-scene1 {
+      position: relative;
+      width: 100%;
+      height: 800px;
+
+      background-image: url("../img/un1.jpg");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+        height: 1200px;
+      }
+
+      .articles-list__uw-scene1-trigger {
+        top: 40%;
+        position: absolute;
+      }
+
+      .articles-list__uw-scene1__scuba-diver {
+        position: absolute;
+
+        left: 25%;
+        bottom: 0;
+        width: 50%;
+        max-width: 250px;
+      }
+    }
+  }
+
+  .articles-list__list-container {
+
+    height: 80%;
+    width: 100%;
+    max-width: 400px;
+    margin: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: transparent;
+    z-index: 3;
+
+    @media screen and (min-width: map-get($breakpoins, lg)) {}
+
+
+    .articles-list__link {
+      text-transform: uppercase;
+      font-family: "Francois One", sans-serif;
+      text-decoration: none;
+      width: 80%;
+      height: 40px;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      display: block;
+      margin-top: 40px;
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(0, 0, 0, 0.3);
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {}
+
+      .articles-list__link-text {
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: bolder;
+        font-size: $base-font-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .articles-list__uw-scene1 {
+
+    overflow: hidden;
+
+    .articles-list__uw-bubble {
+      position: absolute;
+      bottom: -50px;
+      background: transparent;
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: bubbleGoUp 4s linear infinite
+    }
+
+    @keyframes bubbleGoUp {
+
+      0% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+
+      99% {
+        transform: translateY(-1190%);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-1200%);
+        opacity: 0;
+      }
+
+
+    }
+  }
+}
+
+#moonTrigger {
+  position: absolute;
+  top: 700px;
+}

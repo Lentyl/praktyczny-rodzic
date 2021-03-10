@@ -1,0 +1,103 @@
+body {
+
+    background-color: rgb(60, 226, 255);
+
+    .page {
+        position: relative;
+        background-color: black;
+        border-top: 2px solid black;
+        transition: .5s;
+        max-width: 100%;
+        max-height: 100%;
+        top: -144px;
+        left: 0;
+        position: relative;
+
+        @media screen and (min-width: map-get($breakpoins, xl)) {
+            transform: translateY(56px);
+        }
+
+        .homePage {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .homePage__article-search-container {
+                display: flex;
+                height: $main-spacing*1.4;
+                z-index: 2;
+                position: absolute;
+                top: $main-spacing;
+                right: $main-spacing;
+
+                .homePage__search-icon {
+                    transition: .5s;
+                    margin-right: $main-spacing*.5;
+                    line-height: $main-spacing*1.4;
+                    font-size: $base-font-size*1.6;
+                }
+
+
+                .homePage__search-input {
+                    transition: .5s;
+                }
+            }
+
+            .homePage__list-container {
+                background-color: $body-main-color
+            }
+
+
+        }
+    }
+
+    .homePage__navigation-container {
+        padding-top: $main-spacing*.5;
+        padding-bottom: $main-spacing;
+        text-align: center;
+        background-color: rgb(32, 222, 255);
+
+
+
+        .homePage__navigation-button-backward {
+            font-weight: bold;
+            cursor: pointer;
+            width: $main-spacing*2;
+            height: $main-spacing*1.5;
+            border: none;
+            background-color: transparent;
+            font-size: $base-font-size;
+        }
+
+        .homePage__navigation-state-button {
+            font-weight: bold;
+            width: $main-spacing*1.5;
+            height: $main-spacing*1.5;
+            border: none;
+            background-color: transparent;
+            font-size: $base-font-size;
+        }
+
+        .homePage__navigation-button-forward {
+            font-weight: bold;
+            cursor: pointer;
+            width: $main-spacing*2;
+            height: $main-spacing*1.5;
+            border: none;
+            background-color: transparent;
+            font-size: $base-font-size;
+        }
+    }
+
+}
+
+.open {
+    transform: translateY(144px);
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+        transform: translateY(56px);
+    }
+}

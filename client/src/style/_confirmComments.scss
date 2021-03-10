@@ -1,0 +1,72 @@
+.confirm-comments {
+    width: 100%;
+    min-height: 60vh;
+    background-color: #3CE2FF;
+    color: black;
+
+    .confirm-comments__comments-list {
+        color: $main-color;
+
+        width: 100%;
+
+
+
+        .confirm-comments__comment-list-element-container {
+
+            border: 3px solid rgb(123, 129, 111);
+
+            margin: $main-spacing*.8 $main-spacing*.4;
+
+            .confirm-comments__userName {
+                color: white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-left: $main-spacing*.6;
+                position: relative;
+                background-color: rgb(61, 82, 105);
+                display: flex;
+                border-bottom: 2px solid rgb(255, 255, 255);
+                justify-content: space-between;
+
+                .confirm-comments__container {
+
+                    .confirm-comments__confirm-button,
+                    .confirm-comments__cancel-button {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        margin: $main-spacing*.2 $main-spacing*.4 $main-spacing*.2 $main-spacing;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        padding: $main-spacing*.2
+                    }
+                }
+
+                .confirm-comments__cancel-button {
+                    margin-left: 0;
+                }
+
+            }
+
+            .confirm-comments__article-title {
+                background-color: rgb(0, 255, 242);
+
+                color: black;
+                font-weight: bold;
+                padding: $main-spacing*.2 $main-spacing*.5;
+                border-bottom: 1px solid black;
+            }
+
+            .confirm-comments__comment-message {
+                word-wrap: break-word;
+                background-color: white;
+                padding: $main-spacing*.5;
+                color: black;
+            }
+
+
+        }
+    }
+}

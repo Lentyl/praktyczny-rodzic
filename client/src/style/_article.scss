@@ -1,0 +1,35 @@
+.article {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(32, 222, 255) 0%, rgb(255, 255, 255) 10%, $main-color 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+
+
+
+
+    .article__title {
+        font-size: 2.5em;
+        margin: 20px 20px 30px 30px;
+    }
+
+    .article__content {
+
+        letter-spacing: 0.5px;
+        font-size: 1.2em;
+        margin: 0 20px 20px 30px;
+        text-align: justify;
+    }
+
+    .article__date {
+        margin-bottom: $main-spacing;
+        margin-right: 30px;
+        text-align: end;
+    }
+}

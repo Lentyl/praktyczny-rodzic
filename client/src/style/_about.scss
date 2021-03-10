@@ -1,0 +1,110 @@
+.about__container {
+  color: black;
+  background: linear-gradient(
+    rgb(32, 222, 255) 0%,
+    rgb(255, 255, 255) 10%,
+    $main-color 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+
+  .about__about-header {
+    font-size: $base-font-size * 2;
+    margin: $main-spacing * 2 $main-spacing $main-spacing * 0.5 $main-spacing;
+
+    @media screen and (min-width: map-get($breakpoins, md)) {
+      font-size: $main-spacing * 2.4;
+    }
+  }
+
+  .about__me-img {
+    margin: $main-spacing/2 auto;
+    width: 100%;
+  }
+
+  @media screen and (min-width: map-get($breakpoins, xl)) {
+    .about__img-container {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 40%;
+      margin: $main-spacing * 0.5 auto $main-spacing auto;
+      background-color: white;
+      padding: $main-spacing * 0.001 $main-spacing * 0.35;
+      animation: swing linear 5s infinite;
+      overflow: hidden;
+
+      .about__img-glass {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: white, $alpha: 0.2);
+        transform: skewX(-20deg);
+        animation: shine linear 5s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: skewX(-20deg) translateX(0px);
+        }
+
+        50% {
+          transform: skewX(-20deg) translateX(-350px);
+        }
+
+        100% {
+          transform: skewX(-20deg) translateX(0px);
+        }
+      }
+    }
+
+    @keyframes swing {
+      0% {
+        transform: skewY(-4deg);
+      }
+
+      50% {
+        transform: skewY(4deg);
+      }
+
+      100% {
+        transform: skewY(-4deg);
+      }
+    }
+
+    .about__shadow {
+      position: relative;
+      margin: $main-spacing * 2 auto;
+      width: 40%;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      animation: swing 5s linear infinite;
+      filter: blur(5px);
+    }
+  }
+
+  .about__text {
+    margin: $main-spacing/4 $main-spacing/1.5 $main-spacing $main-spacing/1.5;
+    display: block;
+    font-size: $base-font-size;
+    line-height: $main-spacing * 1.2;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    color: black;
+
+    @media screen and (min-width: map-get($breakpoins, md)) {
+      font-size: $main-spacing * 1.1;
+      line-height: $main-spacing * 1.4;
+    }
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      line-height: $main-spacing * 1.6;
+    }
+  }
+}

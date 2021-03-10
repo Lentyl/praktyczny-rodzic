@@ -1,0 +1,65 @@
+.admin-nav {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: left;
+
+  .admin-nav__logout {
+    background-color: rgb(251, 255, 15);
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 6%;
+    margin: $main-spacing $main-spacing $main-spacing $main-spacing * 2.5;
+    min-width: $main-spacing * 6;
+    height: $main-spacing * 1.5;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .admin-nav__logout:hover {
+    background-color: rgb(241, 150, 195);
+    box-shadow: 0 0 10px rgb(212, 0, 255);
+    color: rgb(124, 255, 2);
+  }
+
+  .admin-nav__container {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: $main-spacing 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .admin-nav__navigation-link {
+      border-radius: 5px;
+      max-width: $main-spacing * 10;
+      line-height: $main-spacing * 1.4;
+      text-decoration: none;
+      border: 1px solid black;
+      flex-grow: 1;
+      text-align: center;
+      transition: 0.6s;
+      background-color: blue;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+
+      @media screen and (min-width: map-get($breakpoins, md)) {
+        margin: 0 $main-spacing;
+      }
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+        max-width: $main-spacing * 16;
+        margin: 0 $main-spacing * 2;
+      }
+    }
+
+    .admin-nav__navigation-link:hover {
+      background-color: $main-color;
+      color: black;
+    }
+  }
+}

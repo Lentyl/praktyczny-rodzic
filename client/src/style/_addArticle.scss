@@ -1,0 +1,40 @@
+.add-article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: black;
+    min-height: 70vh;
+    background-color: rgb(60, 226, 255);
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+
+    .add-article__info {
+        max-width: 80%;
+        padding: $main-spacing*.5 $main-spacing $main-spacing*.5 $main-spacing;
+    }
+
+    .add-article__article-title {
+        width: 80%;
+        height: $main-spacing*1.2;
+        margin-bottom: $main-spacing;
+
+
+    }
+
+    .add-article__article {
+        width: 80%;
+        height: 100vh;
+    }
+
+    .add-article__button {
+        font-weight: bold;
+        margin: $main-spacing $main-spacing*3 0 0;
+        background-color: rgb(194, 0, 0);
+        color: white;
+        max-width: $main-spacing*6;
+        border: blue;
+        padding: $main-spacing*.4;
+        align-self: flex-end;
+    }
+}

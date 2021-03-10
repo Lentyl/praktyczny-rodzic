@@ -1,0 +1,48 @@
+.login-page {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: rgb(60, 226, 255);
+    width: 100%;
+    min-height: 70vh;
+    border: none;
+    font-weight: bold;
+
+    .login-page__login-container {
+        width: $main-spacing*12;
+        position: relative;
+        top: 20%;
+        margin: auto;
+        padding: $main-spacing*2 0;
+        display: flex;
+        flex-direction: column;
+
+
+
+        .login-page__login,
+        .login-page__password {
+            background-color: white;
+            position: relative;
+            margin-bottom: $main-spacing;
+            height: $main-spacing*1.5;
+            border: 1.5px solid blue;
+            text-align: center;
+            font-size: $base-font-size;
+
+        }
+
+        .login-page__submit-button {
+            position: relative;
+            left: $main-spacing*6;
+            bottom: 0;
+            width: 50%;
+            background-color: white;
+            border: 1px solid rgb(56, 75, 38);
+            font-size: $base-font-size;
+        }
+
+
+    }
+
+}
