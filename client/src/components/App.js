@@ -18,8 +18,6 @@ class App extends React.Component {
     axios
       .get(`/api/post`, {})
       .then((res) => {
-        
-      
         const newArticles = res.data;
 
         let inscriptionsList = [...this.state.inscriptionsList, ...newArticles ];
