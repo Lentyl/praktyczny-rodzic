@@ -25,7 +25,6 @@ class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { passwordSt, loginSt } = this.state;
-
     axios
       .post(`/login`, {
         permission: {
@@ -52,7 +51,7 @@ class Login extends React.Component {
           });
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   };
 
   render() {

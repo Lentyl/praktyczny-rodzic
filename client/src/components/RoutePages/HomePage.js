@@ -33,7 +33,6 @@ class HomePage extends React.Component {
 
   handleClick = (e) => {
     let { pageNumber } = this.state;
-
     const { inscriptionsList } = this.props;
 
     if (e.target.innerText === "<<") {
@@ -60,9 +59,6 @@ class HomePage extends React.Component {
     let displayPageNumber = this.state.pageNumber;
     let inscriptionsNumber = 4;
     const { inscriptionsList } = this.props;
-
-   
-
     let searchedInscription = [];
 
     if (this.state.pageNumber === 1) {

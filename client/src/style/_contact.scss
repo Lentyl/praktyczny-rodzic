@@ -1,310 +1,251 @@
 .contact-form {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: map-get($breakpoins, sm)) {
     width: 100%;
-    height: 100vh;
+    height: $main-spacing * 38;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(32, 222, 255) 0%, rgb(0, 26, 255) 90%);
+  }
+
+  .contact-form__wraper {
     display: flex;
-    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: relative;
+    background: linear-gradient(rgb(32, 222, 255) 0%, rgb(0, 26, 255) 90%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
 
+    .contact-form__container {
+      width: 100%;
+      height: 180vw;
+      position: relative;
+      top: 0;
+      left: 0;
 
-    @media screen and (min-width: map-get($breakpoins, sm)) {
+      @media screen and (min-width: map-get($breakpoins, sm)) {
+        margin: 30px 0;
+        background-color: black;
+        border: none;
+        border-radius: 8%;
+        width: 350px;
+        height: 700px;
+      }
 
-        width: 100%;
-        height: $main-spacing*38;
-        top: 0;
-        left: 0;
-        background: linear-gradient(rgb(32, 222, 255) 0%, rgb(0, 26, 255)90%);
-    }
-
-
-
-    .contact-form__wraper {
-        display: flex;
-        top: 0;
-        left: 0;
-        position: relative;
-        background: linear-gradient(rgb(32, 222, 255) 0%, rgb(0, 26, 255)90%);
-        position: absolute;
+      .contact-form__screen1-img {
         width: 100%;
         height: 100%;
-        justify-content: center;
-        align-content: center;
-
-
-        .contact-form__container {
-
-            width: 100%;
-            height: 180vw;
-            position: relative;
-            top: 0;
-            left: 0;
-
-
-            @media screen and (min-width: map-get($breakpoins, sm)) {
-
-                margin: 30px 0;
-                background-color: black;
-                border: none;
-                border-radius: 8%;
-                width: 350px;
-                height: 700px;
-            }
-
-
-
-            .contact-form__screen1-img {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-
-                /*   @media screen and (min-width: map-get($breakpoins, xs)) {
-                    height: 140%;
-                } */
-
-
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    display: block;
-                    border-radius: 5px;
-                    position: absolute;
-                    top: $main-spacing*3;
-                    left: $main-spacing*.85;
-                    width: 89.5%;
-                    height: 85%;
-
-                }
-            }
-
-            .contact-form__screen1-button {
-                border: none;
-                padding: 0;
-                cursor: pointer;
-                z-index: 2;
-                position: absolute;
-                width: $main-spacing*4;
-                height: $main-spacing*4;
-                background-color: transparent;
-                top: 24%;
-                left: 52%;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    top: 29%;
-                    left: 51%;
-
-                    width: $main-spacing*3;
-                    height: $main-spacing*3;
-                }
-
-
-            }
-
-
-
-            .contact-form__screen2-img {
-
-
-                z-index: -1;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    border-radius: 5px;
-                    top: $main-spacing*3;
-                    left: $main-spacing*.85;
-                    width: 89.5%;
-                    height: 85%;
-
-                }
-
-            }
-
-            .contact-form__screen2-button1 {
-                top: 4%;
-                left: 2%;
-                padding: 0;
-                border: none;
-                position: absolute;
-                background-color: transparent;
-                cursor: pointer;
-                width: 12%;
-                height: 7%;
-                z-index: 0;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    height: 6%;
-                    width: 10%;
-                    top: 12%;
-                    left: 7%;
-                    z-index: 0;
-
-                }
-
-            }
-
-            .contact-form__input-container {
-                display: flex;
-                width: 65%;
-                height: 60%;
-                top: 10%;
-                left: 18%;
-                position: absolute;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    z-index: -1;
-                    width: 65%;
-                    top: 16%;
-
-                }
-
-
-
-                .contact-form__receiver-name,
-                .contact-form__input-email {
-                    color: rgb(105, 104, 104);
-                    top: 18%;
-                    left: 4%;
-                    position: absolute;
-
-                    background-color: rgb(249, 249, 249);
-                    height: 30px;
-                    width: 100%;
-                    border: none;
-                    border-bottom: 1px solid rgb(0, 0, 27);
-
-                    @media screen and (min-width: map-get($breakpoins, sm)) {
-
-                        top: 18%;
-                        left: 4%;
-                        position: absolute;
-
-                        background-color: rgb(249, 249, 249);
-                        height: 30px;
-                        width: 100%;
-                        border: none;
-                        border-bottom: 1px solid rgb(0, 0, 27);
-
-                    }
-
-                }
-
-                .contact-form__input-email {
-                    top: 5%;
-
-
-                }
-
-                .contact-form__input-mesage {
-
-                    position: absolute;
-                    left: -8%;
-                    top: 40%;
-                    width: 110%;
-                    height: 65%;
-                }
-
-                .contact-form__button {
-                    padding: 0;
-                    position: absolute;
-                    right: -5%;
-                    top: -9%;
-                    z-index: -1;
-                    width: 12%;
-                    height: 8%;
-                    background-color: transparent;
-                    cursor: pointer;
-                    border: none;
-
-                    @media screen and (min-width: map-get($breakpoins, sm)) {
-
-                        right: 0;
-                        top: -7%;
-                        width: $main-spacing*2;
-                        height: $main-spacing*2;
-                        background-color: transparent;
-                        cursor: pointer;
-                        border: none;
-                    }
-
-
-                }
-
-
-
-            }
-
-            .contact-form__phone-img {
-                display: none;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-
-                    z-index: 1;
-                    overflow: hidden;
-                    display: block;
-                    position: relative;
-                    top: -8px;
-                    left: 0;
-                    width: 100%;
-                    height: 102%;
-
-                }
-
-
-            }
-
-            .contact-form__e-mail-link {
-                cursor: pointer;
-                width: 15%;
-                height: 8%;
-                position: absolute;
-                bottom: 11%;
-                left: 31%;
-                z-index: 2;
-                background-color: transparent;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    bottom: 15%;
-
-                }
-
-
-            }
-
-            .contact-form__tel-link {
-
-                width: 15%;
-                height: 8%;
-                position: absolute;
-                bottom: 11%;
-                left: 8%;
-                z-index: 2;
-
-                @media screen and (min-width: map-get($breakpoins, sm)) {
-                    bottom: 15%;
-                    left: 11%;
-                    z-index: 2;
-                    background-color: transparent;
-
-
-
-                }
-            }
+        position: absolute;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          display: block;
+          border-radius: 5px;
+          position: absolute;
+          top: $main-spacing * 3;
+          left: $main-spacing * 0.85;
+          width: 89.5%;
+          height: 85%;
         }
+      }
 
-    }
+      .contact-form__screen1-button {
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 2;
+        position: absolute;
+        width: $main-spacing * 4;
+        height: $main-spacing * 4;
+        background-color: transparent;
+        top: 24%;
+        left: 52%;
 
-    .contact-form__message-position-wrapper {
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          top: 29%;
+          left: 51%;
 
-        position: relative;
-        top: 10%;
+          width: $main-spacing * 3;
+          height: $main-spacing * 3;
+        }
+      }
+
+      .contact-form__screen2-img {
+        z-index: -1;
+        display: block;
+        position: absolute;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 100%;
 
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          border-radius: 5px;
+          top: $main-spacing * 3;
+          left: $main-spacing * 0.85;
+          width: 89.5%;
+          height: 85%;
+        }
+      }
 
+      .contact-form__screen2-button1 {
+        top: 4%;
+        left: 2%;
+        padding: 0;
+        border: none;
+        position: absolute;
+        background-color: transparent;
+        cursor: pointer;
+        width: 12%;
+        height: 7%;
+        z-index: 0;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          height: 6%;
+          width: 10%;
+          top: 12%;
+          left: 7%;
+          z-index: 0;
+        }
+      }
+
+      .contact-form__input-container {
+        display: flex;
+        width: 65%;
+        height: 60%;
+        top: 10%;
+        left: 18%;
+        position: absolute;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          z-index: -1;
+          width: 65%;
+          top: 16%;
+        }
+
+        .contact-form__receiver-name,
+        .contact-form__input-email {
+          color: rgb(105, 104, 104);
+          top: 18%;
+          left: 4%;
+          position: absolute;
+
+          background-color: rgb(249, 249, 249);
+          height: 30px;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid rgb(0, 0, 27);
+
+          @media screen and (min-width: map-get($breakpoins, sm)) {
+            top: 18%;
+            left: 4%;
+            position: absolute;
+
+            background-color: rgb(249, 249, 249);
+            height: 30px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgb(0, 0, 27);
+          }
+        }
+
+        .contact-form__input-email {
+          top: 5%;
+        }
+
+        .contact-form__input-mesage {
+          position: absolute;
+          left: -8%;
+          top: 40%;
+          width: 110%;
+          height: 65%;
+        }
+
+        .contact-form__button {
+          padding: 0;
+          position: absolute;
+          right: -5%;
+          top: -9%;
+          z-index: -1;
+          width: 12%;
+          height: 8%;
+          background-color: transparent;
+          cursor: pointer;
+          border: none;
+
+          @media screen and (min-width: map-get($breakpoins, sm)) {
+            right: 0;
+            top: -7%;
+            width: $main-spacing * 2;
+            height: $main-spacing * 2;
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+          }
+        }
+      }
+
+      .contact-form__phone-img {
+        display: none;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          z-index: 1;
+          overflow: hidden;
+          display: block;
+          position: relative;
+          top: -8px;
+          left: 0;
+          width: 100%;
+          height: 102%;
+        }
+      }
+
+      .contact-form__e-mail-link {
+        cursor: pointer;
+        width: 15%;
+        height: 8%;
+        position: absolute;
+        bottom: 11%;
+        left: 31%;
+        z-index: 2;
+        background-color: transparent;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          bottom: 15%;
+        }
+      }
+
+      .contact-form__tel-link {
+        width: 15%;
+        height: 8%;
+        position: absolute;
+        bottom: 11%;
+        left: 8%;
+        z-index: 2;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+          bottom: 15%;
+          left: 11%;
+          z-index: 2;
+          background-color: transparent;
+        }
+      }
     }
+  }
 
-
+  .contact-form__message-position-wrapper {
+    position: relative;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
 }

@@ -27,8 +27,6 @@ class Contact extends React.Component {
     handelChange = (e) => {
         const type = e.target.type;
 
-
-
         if (type === 'text') {
             const userName = e.target.value;
             this.setState({
@@ -47,8 +45,6 @@ class Contact extends React.Component {
                 email,
             })
         }
-
-
     }
 
 
@@ -68,40 +64,31 @@ class Contact extends React.Component {
             }
         })
             .then(res => res.json())
-            .then(res => {
+            .then(() => {
                 this.setState({
                     send: true,
                 })
             })
             .catch(err => {
-
                 this.setState({
                     send: false,
                 })
-
-                console.log('Error ' + err)
+                alert(err)
             })
 
         this.setState({
             email: '',
             message: '',
-
         })
-
     }
 
     handelMessageCancel = () => {
-
-
         this.setState({
             send: false
         })
     }
 
     render() {
-
-
-
         return (
             <div className='contact-form' >
                 <div className='contact-form__wraper' style={this.state.send ? { filter: 'blur(10px)' } : {}}>

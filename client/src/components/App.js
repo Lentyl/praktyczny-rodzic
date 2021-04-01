@@ -39,7 +39,7 @@ class App extends React.Component {
           inscriptionsList,
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   };
 
   handleLoggedStatus = (loggedInState) => {
