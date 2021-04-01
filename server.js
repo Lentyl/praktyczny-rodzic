@@ -43,8 +43,6 @@ app.use('/contact', contactRouter);
 let msg =process.env.NODE_ENV
 LoginAdminRouts(app);
 
-
-
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build')); // serve the static react app
     app.get(/^\/(?!api).*/, (req, res) => { // don't serve api routes to react app

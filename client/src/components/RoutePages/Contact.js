@@ -21,7 +21,6 @@ class Contact extends React.Component {
         this.setState({
             buttonScreen1: !this.state.buttonScreen1
         })
-
     }
 
     handelChange = (e) => {

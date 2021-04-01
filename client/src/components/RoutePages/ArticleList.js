@@ -3,7 +3,6 @@ import Articles from "./Articles/Articles";
 import { NavLink } from "react-router-dom";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween } from "react-gsap";
-
 import Lighthouse from "../../three-fiber/CanvasLighthouse";
 import seaPic from "../../img/sea2.jpg";
 import moon from "../../img/moon.png";
@@ -15,12 +14,7 @@ import cloud5 from "../../img/cloud1.png";
 import ScubaDiver from "../../img/scuba-diver.png";
 
 class ArticleList extends React.Component {
-
-  
-
   componentDidMount() {
-
-    
     let resetTime = 0;
 
     const createBubbles = (currentTime) => {
@@ -66,8 +60,6 @@ class ArticleList extends React.Component {
   ));
 
   render() {
-
-    console.log(window.location.pathname);
     return (
       <div className="articles-list">
         <div className="articles-list__sea-container">
