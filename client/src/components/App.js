@@ -56,7 +56,6 @@ class App extends React.Component {
     return (
       <Router>
         <Header isMenuOpen={this.isMenuOpen} />
-
         <Page
           menuOpen={this.state.menuOpen}
           handleLoggedStatus={this.handleLoggedStatus}
