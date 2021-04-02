@@ -13,7 +13,7 @@ class Comments extends React.Component {
 
   componentDidMount = () => {
     axios
-      .get(`http://localhost:5000/article/${this.props.title}`, {})
+      .get(`/article/${this.props.title}`, {})
       .then((res) => {
         const commentsList = res.data;
         this.setState({
@@ -51,7 +51,7 @@ class Comments extends React.Component {
     };
 
     axios
-      .post(`http://localhost:5000/addComent`, articleMessage)
+      .post(`/addComent`, articleMessage)
       .then(() => {
         this.setState({
           send: true,
@@ -117,7 +117,6 @@ class Comments extends React.Component {
         >
           {comment}
         </ul>
-
         {this.state.send && (
           <div className="comment-form__message-position-wraper">
             <MessagePopOutWindow
