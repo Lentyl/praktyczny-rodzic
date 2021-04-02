@@ -9,10 +9,7 @@ const SingleInscription = ({
   inscriptionsNumber,
   link,
 }) => {
-
-
   const lastPageList = { marginBottom: "100px" };
-
   const lidEnd = inscriptionContent.indexOf("*lid*", 0);
   const lid = inscriptionContent.slice(0, lidEnd);
 

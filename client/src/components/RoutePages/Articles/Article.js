@@ -9,8 +9,6 @@ class Article extends React.Component {
   };
 
   componentDidMount = () => {
-  
-
         let articles = this.props.inscriptionsList
 
         const article = articles.find((article) => {
@@ -32,15 +30,12 @@ class Article extends React.Component {
           articleInscription: article.inscriptionContent,
           date: article.date,
         });
-    
-     
   };
 
   render() {
     return (
       <div className="article">
         <h2 className="article__title">{this.state.title}</h2>
-
         <p className="article__content">
           {this.state.articleInscription.replace("*lid*", "")}
         </p>

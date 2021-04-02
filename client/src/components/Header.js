@@ -97,11 +97,11 @@ class Header extends React.Component {
                     width: "110%",
                   }
             }
-          ></div>
+          />
           <div
             className="app-header__hamburger-menu-bar"
             style={this.state.menuOpen ? {} : { opacity: "0" }}
-          ></div>
+          />
           <div
             className="app-header__hamburger-menu-bar"
             style={
@@ -112,7 +112,7 @@ class Header extends React.Component {
                     width: "110%",
                   }
             }
-          ></div>
+          />
         </div>
       </header>
     );

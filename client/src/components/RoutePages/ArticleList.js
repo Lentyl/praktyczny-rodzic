@@ -121,7 +121,6 @@ class ArticleList extends React.Component {
             </Controller>
           </div>
         </div>
-
         <ul className="articles-list__list-container">{this.articles}</ul>
       </div>
     );

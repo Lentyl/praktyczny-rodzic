@@ -15,15 +15,13 @@ class Messages extends React.Component {
           contactMessages
         });
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   }
 
   hadleDelete = id => {
     axios
       .delete(`/admin/messages`, { data: { id } })
-      .then(res => {
-        console.log("res   " + res.data);
-
+      .then(()=> {
         const newList = this.state.contactMessages.filter(item => {
           return item._id !== id;
         });
@@ -32,7 +30,7 @@ class Messages extends React.Component {
           contactMessages: newList
         });
       })
-      .catch(err => console.log("error      :!  " + err));
+      .catch(err => alert( err));
   };
 
   render() {

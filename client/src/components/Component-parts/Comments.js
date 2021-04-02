@@ -13,15 +13,14 @@ class Comments extends React.Component {
 
   componentDidMount = () => {
     axios
-      .get(`/article/${this.props.title}`, {})
+      .get(`http://localhost:5000/article/${this.props.title}`, {})
       .then((res) => {
         const commentsList = res.data;
-
         this.setState({
           commentsList,
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   };
 
   handelChange = (e) => {
@@ -52,14 +51,13 @@ class Comments extends React.Component {
     };
 
     axios
-      .post(`/addComent`, articleMessage)
-      .then((res) => {
-        console.log("res   " + res.data);
+      .post(`http://localhost:5000/addComent`, articleMessage)
+      .then(() => {
         this.setState({
           send: true,
         });
       })
-      .catch((err) => console.log("error      :!  " + err));
+      .catch((err) => alert(err));
 
     this.setState({
       userName: "",
@@ -124,9 +122,7 @@ class Comments extends React.Component {
           <div className="comment-form__message-position-wraper">
             <MessagePopOutWindow
               handelMessageCancel={this.handelMessageCancel}
-              message={
-                "Mając na względzie zachowanie wysokich standardów dyskusji, twój komentarz przechodzi weryfikację."
-              }
+              message="Mając na względzie zachowanie wysokich standardów dyskusji, twój komentarz przechodzi weryfikację."
             />
           </div>
         )}

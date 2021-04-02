@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
-
 import Header from "./Header";
 import Page from "./Page";
 import articles from "./RoutePages/Articles/Articles";
@@ -19,15 +18,11 @@ class App extends React.Component {
       .get(`/api/post`, {})
       .then((res) => {
         const newArticles = res.data;
-
         let inscriptionsList = [...this.state.inscriptionsList, ...newArticles ];
-
-        console.log(inscriptionsList);
         inscriptionsList = inscriptionsList.map((inscription, i) => {
           if (!inscription.number) {
             inscription.number = ++i;
           }
-
           return inscription;
         });
         

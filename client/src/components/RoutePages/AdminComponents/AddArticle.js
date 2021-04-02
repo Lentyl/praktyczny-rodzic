@@ -10,35 +10,26 @@ class AddArticle extends React.Component {
         title: '',
     }
 
-
     handleclick = () => {
 
         const postedArticle = {
             article: this.state.article,
             title: this.state.title
-
         }
 
         axios.post(`/admin/add-article`, postedArticle)
             .then(res => {
-                console.log("res   " + res.data)
-
+                console.log(res.data)
             })
-            .catch(err => console.log("error      :!  " + err))
-
+            .catch(err => alert(err))
         this.setState({
             article: '',
             title: '',
         })
     }
 
-
-
-
     render() {
-
         return (
-
             <div className='add-article'>
                 <AdminNav handleLoggedStatus={this.props.handleLoggedStatus} loggedInState={this.props.loggedInState} />
                 <p className='add-article__info'>Zaznacz *lid* gdzie ma kończyć się tekst wprowadzający czytelnika, który będzie widoczny na głównej stronie. </p>
@@ -46,9 +37,7 @@ class AddArticle extends React.Component {
                 <textarea className='add-article__article' type='text' placeholder='Artykuł' value={this.state.article} onChange={(e) => this.setState({ article: e.target.value })}></textarea>
                 <button className='add-article__button' onClick={this.handleclick}>Dodaj Artykuł</button>
             </div>
-
         )
-
     }
 }
 

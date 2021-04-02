@@ -5,7 +5,6 @@ import cloud1 from "../../img/cloud1.png";
 import cloud2 from "../../img/cloud2.png";
 import cloud3 from "../../img/cloudT.png";
 import cloud4 from "../../img/cloud4.png";
-
 import cloudB1 from "../../img/clouds/cloud1.png";
 import cloudB2 from "../../img/clouds/cloud2.png";
 import cloudB3 from "../../img/clouds/cloud3.png";

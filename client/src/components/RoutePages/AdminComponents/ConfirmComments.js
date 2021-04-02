@@ -21,15 +21,13 @@ class ConfirmComments extends React.Component {
           commentsList
         });
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   }
 
   handleClick = (e, id) => {
     const buttonTypeCheck = e.target.value;
 
     if (buttonTypeCheck === "Zatwierdź") {
-      console.log(this.state.commentsList);
-
       axios
         .put(`/admin/confirm-comments`, { id })
         .then(res => {
@@ -46,15 +44,13 @@ class ConfirmComments extends React.Component {
             commentsList: newList
           });
         })
-        .catch(err => console.log("error      :!  " + err));
+        .catch(err => alert(err));
     } else {
       axios
         .delete(`/admin/confirm-comments`, {
           data: { id }
         })
-        .then(res => {
-          console.log("res   " + res.data);
-
+        .then(()=> {
           const newList = this.state.commentsList.filter(item => {
             return item._id !== id;
           });
@@ -63,7 +59,7 @@ class ConfirmComments extends React.Component {
             commentsList: newList
           });
         })
-        .catch(err => console.log("error      :!  " + err));
+        .catch(err => alert(err));
     }
   };
 

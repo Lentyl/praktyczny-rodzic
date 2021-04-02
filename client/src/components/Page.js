@@ -19,7 +19,6 @@ const Page = ({
   loggedInState,
   inscriptionsList,
 }) => {
-
   return (
     <div className={`page ${menuOpen ? "open" : ""}`}>
       <Switch>
@@ -91,13 +90,11 @@ const Page = ({
             />
           )}
         />
-
         <Route
           path="/article/:title"
           exact
           render={(props) => <Article {...props} inscriptionsList={inscriptionsList} />}
         />
-
         <Route path="" exact component={ErrorPage} />
       </Switch>
     </div>
