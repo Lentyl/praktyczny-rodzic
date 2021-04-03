@@ -12,33 +12,36 @@
   .articles-list__sea-container {
     position: relative;
     background-color: rgb(0, 94, 177);
-    height: 30vh;
+    height: 30vw;
+    min-height: 300px;
     width: 100%;
     overflow: hidden;
 
     @media screen and (min-width: map-get($breakpoins, xs)) {
-      height: 40vh;
+      height: 60vw;
     }
 
     @media screen and (min-width: map-get($breakpoins, md)) {
-      height: 60vh;
+      height: 70vw;
     }
 
     @media screen and (min-width: map-get($breakpoins, lg)) {
-      height: 80vh;
+      height: 80vw;
     }
 
     @media screen and (min-width: map-get($breakpoins, xl)) {
-      height: 160vh;
+      height: 100wv;
     }
 
     .lighthouse {
       position: absolute;
-      width: 40%;
+      width: 20%;
       height: 40%;
-      right: -15%;
-      bottom: 0;
+      right: 0;
+      bottom: -26px;
       z-index: 2;
+      @media screen and (min-width: map-get($breakpoins, xs)) {
+      }
     }
 
     .articles-list__moon {
@@ -48,8 +51,6 @@
       width: 20vw;
       height: 20vw;
       align-self: center;
-
-      @media screen and (min-width: map-get($breakpoins, xs)) {}
     }
 
     .articles-list__sea {
@@ -132,10 +133,12 @@
   }
 
   .articles-list__uw-container::before {
-    background: linear-gradient(transparent 0%,
-        rgb(5, 121, 254) 30%,
-        rgb(0, 172, 199) 60%,
-        transparent);
+    background: linear-gradient(
+      transparent 0%,
+      rgb(5, 121, 254) 30%,
+      rgb(0, 172, 199) 60%,
+      transparent
+    );
 
     content: "";
     position: absolute;
@@ -188,20 +191,18 @@
   }
 
   .articles-list__list-container {
-
     height: 80%;
-    width: 100%;
+    width: 95%;
     max-width: 400px;
-    margin: 2%;
     position: absolute;
     top: 0;
     left: 0;
-
     background-color: transparent;
     z-index: 3;
+    padding-left: 3%;
 
-    @media screen and (min-width: map-get($breakpoins, lg)) {}
-
+    @media screen and (min-width: map-get($breakpoins, lg)) {
+    }
 
     .articles-list__link {
       text-transform: uppercase;
@@ -218,7 +219,8 @@
       background-color: rgba(255, 255, 255, 0.3);
       border: 1px solid rgba(0, 0, 0, 0.3);
 
-      @media screen and (min-width: map-get($breakpoins, xl)) {}
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+      }
 
       .articles-list__link-text {
         color: rgba(0, 0, 0, 0.5);
@@ -236,7 +238,6 @@
   }
 
   .articles-list__uw-scene1 {
-
     overflow: hidden;
 
     .articles-list__uw-bubble {
@@ -246,11 +247,10 @@
       border-radius: 50%;
       pointer-events: none;
       box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
-      animation: bubbleGoUp 4s linear infinite
+      animation: bubbleGoUp 4s linear infinite;
     }
 
     @keyframes bubbleGoUp {
-
       0% {
         transform: translateY(0%);
         opacity: 1;
@@ -265,8 +265,6 @@
         transform: translateY(-1200%);
         opacity: 0;
       }
-
-
     }
   }
 }
