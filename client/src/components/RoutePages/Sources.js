@@ -38,6 +38,9 @@ const Sources = ({ inscriptionsList }) => {
               number={ins.number}
               title={ins.title}
               inscriptionContent={ins.inscriptionContent}
+              books={ins.books}
+              music={ins.music}
+              helpfulLinks={ins.helpfulLinks}
               date={ins.date}
               inscriptionsNumber={ins.number}
               link={`/article/${ins.title}`}

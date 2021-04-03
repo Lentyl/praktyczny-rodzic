@@ -8,6 +8,9 @@ const SingleInscription = ({
   date,
   inscriptionsNumber,
   link,
+  books,
+  music,
+  helpfulLinks,
 }) => {
   const lastPageList = { marginBottom: "100px" };
   const lidEnd = inscriptionContent.indexOf("*lid*", 0);
@@ -22,10 +25,14 @@ const SingleInscription = ({
         <div className="inscription-skw-element"></div>
         <h2 className="inscription-number">{number}</h2>
         <h3 className="inscription-title">{title}</h3>
-
+        {books? <div className="inscription-content">
+        <p className="inscription-content-paragraph"><span>books: </span>{books} </p>
+        <p className="inscription-content-paragraph"><span>music: </span>{music} </p>
+        <p className="inscription-content-paragraph"><span>helpful links: </span>{helpfulLinks} </p>
+        </div> :
         <p className="inscription-content">
           {lidEnd === -1 ? inscriptionContent : lid}
-        </p>
+        </p>}
         <button className="inscription-read-more-button">
           <NavLink className="inscription-read-more-link" to={link}>
             Czytaj dalej
